@@ -1,4 +1,4 @@
-package entities
+package internal
 
 import (
 	"net/http"
@@ -7,6 +7,7 @@ import (
 
 type Client struct {
 	url string
+	port int
 	timeout time.Duration
-	htppClient *http.Client
+	httpClient *http.Client
 }
