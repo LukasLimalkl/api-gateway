@@ -1,9 +1,13 @@
 package internal
 
+import "net/http"
 
 
-func NewClient(url string, port  int)  *Client {
+
+func NewClient(options ...option)(*Client , error){
 	
-	return &Client{url, port,timeout, httpClient}
-
+	c := Client{
+		url: productionURL,
+		httpClient: &http.Client{},
+	}
 }
